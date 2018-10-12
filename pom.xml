@@ -44,6 +44,8 @@
 		<quartz.version>2.2.2</quartz.version>
 		<sigar.version>1.6.4</sigar.version>
 		<fastjson.version>1.2.47</fastjson.version>
+		<redis.version>2.9.0</redis.version>
+		<spring.redis.version>1.6.2.RELEASE</spring.redis.version>
   </properties>
 	<dependencyManagement>
  	 <dependencies>
@@ -131,6 +133,17 @@
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
 				<version>${druid.version}</version>
+			</dependency>
+			<!-- redis -->
+			<dependency>
+    			<groupId>redis.clients</groupId>
+    			<artifactId>jedis</artifactId>
+    			<version>${redis.version}</version>
+			</dependency>
+			<dependency>
+    			<groupId>org.springframework.data</groupId>
+    			<artifactId>spring-data-redis</artifactId>
+   				<version>${spring.redis.version}</version>
 			</dependency>
 			<!-- Spring -->
 			<dependency>
@@ -237,6 +250,11 @@
       		 	<artifactId>quartz-jobs</artifactId>
         		<version>${quartz.version}</version>
     		</dependency>
+    		<dependency>
+        	    <groupId>org.springframework</groupId>
+        	    <artifactId>spring-tx</artifactId>
+         	   <version>${spring.version}</version>
+        	</dependency>
 			<!-- sigar util -->
 			<dependency>
 				<groupId>org.hyperic</groupId>
